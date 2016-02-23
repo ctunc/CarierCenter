@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+---
+server:
+  port: 8052    
+
+---
+spring:
+  profiles: test
+  datasource:
+    username: postgres
+    password: 123456
+
+
+
